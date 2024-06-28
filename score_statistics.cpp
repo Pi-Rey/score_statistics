@@ -1,18 +1,23 @@
 #include <iostream>
 #include <string>
-//#include "gradestatistik.h"
 using namespace std;
 
 string subject[5] = { "Mathematics","Swedish","English","History","Physics" };
 int credit[5];
 char grade[6];
 
-int addCredit(string subject[5], int credit[5]) {
+void addCredit(string subject[5], int credit[5]) {
 	for (int i = 0; i <= 4; i++) {
-		cout << "Enter grade for " << subject[i] << ": ";
-		cin >> credit[i];
+
+        do {
+            cout << "Enter credit for " << subject[i] << " (max 100): ";
+            cin >> credit[i];
+            if (credit[i] > 100 || credit[i] < 0) {
+                cout << "Error: Credit must be between 0 and 100. Please try again." << endl;
+            }
+        } while (credit[i] > 100); 
 	}
-	return credit[5];
+//	return credit[5];
 }
 
 void renderGrade(string subject[5], char grade[6]){
@@ -79,13 +84,3 @@ int main()
 	
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
