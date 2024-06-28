@@ -58,7 +58,7 @@ This C++ program calculates grades based on credits entered for various subjects
 4. **Check Statistics:** After displaying grades, the program will show statistics including the number of each grade category and the total sum of credits.
 
 ## Example Usage
-![example. screenshoot of the console][https://github.com/Pi-Rey/score_statistics/blob/76089f5ebd1fb462d025941c84462055fe861e21/images/screenshoot.png]
+![screenshoot of the console](https://github.com/Pi-Rey/score_statistics/blob/76089f5ebd1fb462d025941c84462055fe861e21/images/screenshoot.png)
 ## Notes
 
 - This program assumes valid input of credits (numeric values between 0 and 100).
